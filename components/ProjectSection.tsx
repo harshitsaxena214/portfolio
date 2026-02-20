@@ -53,7 +53,7 @@ export const ProjectsSection = () => {
           <span className="section-label">Curated Selection</span>
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-serif">
             <span className="italic text-shimmer">Featured</span>{" "}
-            <span className="text-shimmer">Works</span>
+            <span className="italic text-shimmer">Works</span>
           </h2>
           <div className="w-full h-px bg-gradient-to-r from-border via-muted-foreground/20 to-transparent mt-6" />
         </motion.div>
