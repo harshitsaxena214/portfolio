@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
 
 @theme {
@@ -33,17 +31,36 @@
 
   --radius: 0.75rem;
 
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 @layer base {
   :root {
-    --gradient-mountain: linear-gradient(180deg, hsl(220 20% 8%) 0%, hsl(220 15% 12%) 50%, hsl(220 20% 10%) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(152 60% 50% / 0.2) 0%, hsl(25 80% 55% / 0.15) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 15% 15% / 0.8) 0%, hsl(220 15% 10% / 0.9) 100%);
+    --gradient-mountain: linear-gradient(
+      180deg,
+      hsl(220 20% 8%) 0%,
+      hsl(220 15% 12%) 50%,
+      hsl(220 20% 10%) 100%
+    );
+
+    --gradient-glow: linear-gradient(
+      135deg,
+      hsl(152 60% 50% / 0.2) 0%,
+      hsl(25 80% 55% / 0.15) 100%
+    );
+
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(220 15% 15% / 0.8) 0%,
+      hsl(220 15% 10% / 0.9) 100%
+    );
+
     --shadow-glow: 0 0 40px hsl(152 60% 50% / 0.15);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, sans-serif;
   }
 
   * {
@@ -60,7 +77,9 @@
     background: var(--color-background);
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-serif);
   }
 }
@@ -73,12 +92,20 @@
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, var(--color-foreground) 0%, var(--color-muted-foreground) 100%);
+    background-image: linear-gradient(
+      135deg,
+      var(--color-foreground) 0%,
+      var(--color-muted-foreground) 100%
+    );
   }
 
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    background-image: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-accent) 100%
+    );
   }
 
   .text-shimmer {
@@ -97,12 +124,16 @@
   }
 
   @keyframes shimmer {
-    0% { background-position: 100% 0; }
-    100% { background-position: 0% 0; }
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0% 0;
+    }
   }
 
   .glow-text {
-    text-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 50%, transparent);
+    text-shadow: 0 0 40px hsl(152 60% 50% / 0.5);
   }
 
   .availability-badge {
@@ -136,89 +167,6 @@
   .contact-btn {
     @apply inline-flex items-center gap-3 px-5 py-3 rounded-full border border-border bg-card/50 backdrop-blur text-foreground hover:bg-card hover:border-foreground/20 transition-all duration-300 text-sm font-medium;
   }
-
-  /* shadcn/ui Command overrides */
-  [cmdk-dialog] {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 20vh;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-  }
-
-  [cmdk-root] {
-    width: min(560px, calc(100vw - 32px));
-    background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.8);
-    overflow: hidden;
-  }
-
-  [cmdk-input] {
-    width: 100%;
-    padding: 16px 20px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--color-foreground);
-    font-size: 15px;
-    font-family: var(--font-sans);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  [cmdk-input]::placeholder {
-    color: var(--color-muted-foreground);
-  }
-
-  [cmdk-list] {
-    max-height: 360px;
-    overflow-y: auto;
-    padding: 8px 0;
-  }
-
-  [cmdk-group-heading] {
-    padding: 8px 20px 4px;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-muted-foreground);
-    font-family: 'DM Mono', monospace;
-    font-weight: 500;
-  }
-
-  [cmdk-item] {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.15s;
-    color: var(--color-foreground);
-    font-size: 14px;
-  }
-
-  [cmdk-item]:hover,
-  [cmdk-item][data-selected="true"] {
-    background: var(--color-secondary);
-  }
-
-  [cmdk-empty] {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--color-muted-foreground);
-    font-size: 14px;
-  }
-
-  [cmdk-separator] {
-    height: 1px;
-    background: var(--color-border);
-    margin: 4px 0;
-  }
 }
 
 @layer utilities {
@@ -231,31 +179,40 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%, 100% 50%, 50% 100%, 0% 0%; }
-    25% { background-position: 50% 0%, 50% 100%, 100% 50%, 0% 0%; }
-    50% { background-position: 100% 50%, 0% 50%, 50% 0%, 0% 0%; }
-    75% { background-position: 50% 100%, 50% 0%, 0% 50%, 0% 0%; }
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .typing-cursor::after {
-    content: '|';
+    content: "|";
     animation: blink 1s infinite;
     @apply text-primary ml-1;
   }
 
   @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
   }
 
   .group:hover .marquee-content {
