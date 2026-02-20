@@ -34,7 +34,7 @@ const navigationItems = [
 const linkItems = [
   { icon: Twitter,  label: 'X Profile',        shortcut: 'Shift+X', action: 'link', url: 'https://twitter.com' },
   { icon: Linkedin, label: 'LinkedIn Profile',  shortcut: 'Shift+L', action: 'link', url: 'https://linkedin.com' },
-  { icon: Github,   label: 'GitHub Profile',   shortcut: 'Shift+G', action: 'link', url: 'https://github.com' },
+  { icon: Github,   label: 'GitHub Profile',   shortcut: 'Shift+G', action: 'link', url: 'https://github.com/harshitsaxena214' },
   { icon: Mail,     label: 'Email',            shortcut: 'Shift+E', action: 'link', url: 'mailto:hello@harshitsaxena.dev' },
 ]
 

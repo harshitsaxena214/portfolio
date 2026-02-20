@@ -18,14 +18,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Harshit Saxena — Full Stack Developer",
+  title: "Harshit Saxena - Full Stack Developer",
   description:
     "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, React, and Node.js.",
   authors: [{ name: "Harshit Saxena" }],
   openGraph: {
-    title: "Harshit Saxena — Full Stack Developer",
+    title: "Harshit Saxena - Full Stack Developer",
     description:
-      "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, React, and Node.js.",
+      "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, Next.js and Node.js.",
     type: "website",
   },
   twitter: {

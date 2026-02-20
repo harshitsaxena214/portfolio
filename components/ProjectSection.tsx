@@ -21,7 +21,7 @@ const projects = [
       "A modern fintech landing page with clean design, smooth animations, and strong visual hierarchy — built to showcase AI-accelerated, high-quality frontend development.",
     image: "/project2.png",
     tags: ["React", "TypeScript", "AI", "Tailwind"],
-    liveUrl: "https://finpay-zeta.vercel.app",
+    liveUrl: "https://fin-pay-zeta.vercel.app",
     githubUrl: "https://github.com/harshitsaxena214/Fin-pay",
   },
   {

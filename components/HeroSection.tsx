@@ -150,7 +150,7 @@ export const HeroSection = () => {
             </span>{" "}
             passionate about crafting seamless interfaces with{" "}
             <span className="text-foreground font-medium">TypeScript</span>,{" "}
-            <span className="text-foreground font-medium">React</span>, and{" "}
+            <span className="text-foreground font-medium">Next.js</span> and{" "}
             <span className="text-foreground font-medium">Node.js</span>. Also
             curious about building automation workflows with{" "}
             <span className="text-primary font-medium">n8n</span>.
