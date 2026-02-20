@@ -1,11 +1,19 @@
-'use client'
+"use client";
 
-import { Github, Linkedin, Twitter, Instagram, Menu, X, Search } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Menu,
+  X,
+  Search,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { CommandMenu } from "./CommandMenu";
+import { CommandMenu } from "./CommandMenu";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -97,11 +105,13 @@ export const Navbar = () => {
             >
               <Search size={14} />
               <span className="text-sm">Ctrl</span>
-              <kbd className="px-1.5 py-0.5 text-xs bg-background rounded border border-border">K</kbd>
+              <kbd className="px-1.5 py-0.5 text-xs bg-background rounded-md border border-border">
+                K
+              </kbd>
             </motion.button>
           </div>
 
-          {/* <CommandMenu /> */}
+          <CommandMenu />
 
           {/* Mobile Hamburger */}
           <motion.button
@@ -141,7 +151,9 @@ export const Navbar = () => {
                       href={link.href}
                       onClick={closeMenu}
                       className={`text-3xl font-serif italic hover:text-primary transition-colors py-2 block ${
-                        pathname === link.href ? "text-primary" : "text-foreground"
+                        pathname === link.href
+                          ? "text-primary"
+                          : "text-foreground"
                       }`}
                     >
                       {link.name}
