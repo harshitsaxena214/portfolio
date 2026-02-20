@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   LayoutGrid,
   Briefcase,
@@ -12,7 +12,7 @@ import {
   Mail,
   Copy,
   Home,
-} from 'lucide-react'
+} from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -22,73 +22,146 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@/components/ui/command'
-import { toast } from 'sonner'
+} from "@/components/ui/command";
+import { toast } from "sonner";
 
 const navigationItems = [
-  { icon: Home,     label: 'Go to Home',     shortcut: 'Shift+H', action: 'navigate', path: '/' },
-  { icon: Briefcase,label: 'Go to Projects', shortcut: 'Shift+P', action: 'navigate', path: '/projects' },
-  { icon: FileText, label: 'Go to Writing',  shortcut: 'Shift+W', action: 'navigate', path: '/writing' },
-]
+  {
+    icon: Home,
+    label: "Go to Home",
+    shortcut: "Shift+H",
+    action: "navigate",
+    path: "/",
+  },
+  {
+    icon: Briefcase,
+    label: "Go to Projects",
+    shortcut: "Shift+P",
+    action: "navigate",
+    path: "/projects",
+  },
+  {
+    icon: FileText,
+    label: "Go to Writing",
+    shortcut: "Shift+W",
+    action: "navigate",
+    path: "/writing",
+  },
+];
 
 const linkItems = [
-  { icon: Twitter,  label: 'X Profile',        shortcut: 'Shift+X', action: 'link', url: 'https://twitter.com' },
-  { icon: Linkedin, label: 'LinkedIn Profile',  shortcut: 'Shift+L', action: 'link', url: 'https://linkedin.com' },
-  { icon: Github,   label: 'GitHub Profile',   shortcut: 'Shift+G', action: 'link', url: 'https://github.com/harshitsaxena214' },
-  { icon: Mail,     label: 'Email',            shortcut: 'Shift+E', action: 'link', url: 'mailto:hello@harshitsaxena.dev' },
-]
+  {
+    icon: Twitter,
+    label: "X Profile",
+    shortcut: "Shift+X",
+    action: "link",
+    url: "https://twitter.com",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn Profile",
+    shortcut: "Shift+L",
+    action: "link",
+    url: "https://linkedin.com",
+  },
+  {
+    icon: Github,
+    label: "GitHub Profile",
+    shortcut: "Shift+G",
+    action: "link",
+    url: "https://github.com/harshitsaxena214",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    shortcut: "Shift+E",
+    action: "link",
+    url: "mailto:hello@harshitsaxena.dev",
+  },
+];
 
 const generalItems = [
-  { icon: Copy, label: 'Copy Link', shortcut: 'Shift+C', action: 'copy' },
-]
+  { icon: Copy, label: "Copy Link", shortcut: "Shift+C", action: "copy" },
+];
 
-type AnyItem = typeof navigationItems[0] | typeof linkItems[0] | typeof generalItems[0]
+type AnyItem =
+  | (typeof navigationItems)[0]
+  | (typeof linkItems)[0]
+  | (typeof generalItems)[0];
 
 export const CommandMenu = () => {
-  const [open, setOpen] = useState(false)
-  const router = useRouter()
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen((o) => !o)
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setOpen((o) => !o);
       }
 
       if (open && e.shiftKey) {
         switch (e.key.toUpperCase()) {
-          case 'H': e.preventDefault(); router.push('/');         setOpen(false); break
-          case 'P': e.preventDefault(); router.push('/projects'); setOpen(false); break
-          case 'W': e.preventDefault(); router.push('/writing');  setOpen(false); break
-          case 'X': e.preventDefault(); window.open('https://twitter.com', '_blank'); setOpen(false); break
-          case 'L': e.preventDefault(); window.open('https://linkedin.com', '_blank'); setOpen(false); break
-          case 'G': e.preventDefault(); window.open('https://github.com', '_blank'); setOpen(false); break
-          case 'E': e.preventDefault(); window.location.href = 'mailto:hello@harshitsaxena.dev'; setOpen(false); break
-          case 'C':
-            e.preventDefault()
-            navigator.clipboard.writeText(window.location.href)
-            toast.success('Link copied to clipboard!')
-            setOpen(false)
-            break
+          case "H":
+            e.preventDefault();
+            router.push("/");
+            setOpen(false);
+            break;
+          case "P":
+            e.preventDefault();
+            router.push("/projects");
+            setOpen(false);
+            break;
+          case "W":
+            e.preventDefault();
+            router.push("/writing");
+            setOpen(false);
+            break;
+          case "X":
+            e.preventDefault();
+            window.open("https://twitter.com", "_blank");
+            setOpen(false);
+            break;
+          case "L":
+            e.preventDefault();
+            window.open("https://linkedin.com", "_blank");
+            setOpen(false);
+            break;
+          case "G":
+            e.preventDefault();
+            window.open("https://github.com", "_blank");
+            setOpen(false);
+            break;
+          case "E":
+            e.preventDefault();
+            window.location.href = "mailto:hello@harshitsaxena.dev";
+            setOpen(false);
+            break;
+          case "C":
+            e.preventDefault();
+            navigator.clipboard.writeText(window.location.href);
+            toast.success("Link copied to clipboard!");
+            setOpen(false);
+            break;
         }
       }
-    }
+    };
 
-    document.addEventListener('keydown', down)
-    return () => document.removeEventListener('keydown', down)
-  }, [open, router])
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, [open, router]);
 
   const handleSelect = (item: AnyItem) => {
-    if (item.action === 'navigate' && 'path' in item) {
-      router.push(item.path)
-    } else if (item.action === 'link' && 'url' in item) {
-      window.open(item.url, '_blank')
-    } else if (item.action === 'copy') {
-      navigator.clipboard.writeText(window.location.href)
-      toast.success('Link copied to clipboard!')
+    if (item.action === "navigate" && "path" in item) {
+      router.push(item.path);
+    } else if (item.action === "link" && "url" in item) {
+      window.open(item.url, "_blank");
+    } else if (item.action === "copy") {
+      navigator.clipboard.writeText(window.location.href);
+      toast.success("Link copied to clipboard!");
     }
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <CommandDialog open={open} onOpenChange={setOpen}>
@@ -99,7 +172,9 @@ export const CommandMenu = () => {
         </div>
         <div className="flex-1">
           <h3 className="font-medium text-foreground">Home</h3>
-          <p className="text-sm text-muted-foreground">About me and what I&apos;m up to</p>
+          <p className="text-sm text-muted-foreground">
+            About me and what I&apos;m up to
+          </p>
         </div>
       </div>
 
@@ -161,5 +236,5 @@ export const CommandMenu = () => {
         </CommandGroup>
       </CommandList>
     </CommandDialog>
-  )
-}
+  );
+};
