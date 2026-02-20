@@ -14,7 +14,7 @@ export const Footer = () => {
           viewport={{ once: true }}
           className="mb-14"
         >
-          <blockquote className="text-xl sm:text-2xl md:text-3xl font-serif italic text-shimmer mb-4">
+          <blockquote className="text-xl sm:text-2xl md:text-3xl font-serif italic mb-4">
             "You have the right to perform your duty,
             <br />
             but not to the fruits of your actions."
@@ -32,7 +32,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Harshit Saxena.</p>
           <p className="tracking-wide">
-           Building what matters.
+           Building What Matters.
           </p>
         </div>
 

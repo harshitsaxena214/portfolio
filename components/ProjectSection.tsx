@@ -7,24 +7,22 @@ import { ProjectCard } from "./ProjectCard";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Mystery Message",
     description:
-      "A modern e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "An anonymous messaging web application where users can create a unique link, share it publicly, and receive anonymous messages securely.",
+    image: "/project1.png",
+    tags: ["Next.js", "Shadcn", "MongoDB", "NextAuth"],
+    liveUrl: "https://mysterymessage-delta.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/mysterymessage",
   },
   {
-    title: "Automation Dashboard",
+    title: "Finpay Landing Page",
     description:
-      "n8n workflow automation dashboard for managing and monitoring complex business processes.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
-    tags: ["n8n", "TypeScript", "React", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A modern fintech landing page with clean design, smooth animations, and strong visual hierarchy — built to showcase AI-accelerated, high-quality frontend development.",
+    image: "/project2.png",
+    tags: ["React", "TypeScript", "AI", "Tailwind"],
+    liveUrl: "https://finpay-zeta.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/Fin-pay",
   },
   {
     title: "SaaS Analytics Tool",
@@ -52,7 +50,7 @@ export const ProjectsSection = () => {
         >
           <span className="section-label">Curated Selection</span>
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-serif">
-            <span className="italic text-shimmer">Featured</span>{" "}
+            <span className="pl-1 italic text-shimmer">Featured</span>{" "}
             <span className="italic text-shimmer">Works</span>
           </h2>
           <div className="w-full h-px bg-gradient-to-r from-border via-muted-foreground/20 to-transparent mt-6" />
