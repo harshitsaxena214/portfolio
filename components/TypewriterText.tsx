@@ -17,7 +17,6 @@ export const TypewriterText = ({ words, className = "" }: TypewriterTextProps) =
 
     let delay = isDeleting ? 50 : 100;
 
-    // Pause when word is fully typed
     if (!isDeleting && text === currentWord) {
       delay = 2000;
     }

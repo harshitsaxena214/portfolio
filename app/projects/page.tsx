@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Github, ArrowUpRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { TechIcons } from "@/components/TechIcons";
 import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
@@ -21,8 +22,9 @@ import {
   SiOpenai,
   SiAmazonwebservices,
   SiGoogle,
+  SiShadcnui,
+  SiVite,
 } from "react-icons/si";
-import { Separator } from "@/components/ui/separator";
 
 // Types
 interface TechItem {
@@ -40,47 +42,8 @@ interface Project {
   liveUrl?: string;
 }
 
-// TechStack (inlined)
-function TechStack({ items }: { items: TechItem[] }) {
-  const [expanded, setExpanded] = useState(false);
-  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
+//ProjectCard (inlined)
 
-  return (
-    <div
-      className="flex items-center"
-      onMouseEnter={() => setExpanded(true)}
-      onMouseLeave={() => {
-        setExpanded(false);
-        setHoveredTech(null);
-      }}
-    >
-      {items.map((tech, i) => (
-        <div
-          key={tech.name}
-          className="relative transition-all duration-300 ease-out"
-          style={{
-            marginLeft: i === 0 ? 0 : expanded ? "8px" : "-10px",
-            zIndex: hoveredTech === tech.name ? 20 : items.length - i,
-          }}
-          onMouseEnter={() => setHoveredTech(tech.name)}
-          onMouseLeave={() => setHoveredTech(null)}
-        >
-          <div className="w-10 h-10 rounded-full bg-secondary border-2 border-background flex items-center justify-center transition-transform duration-200 hover:scale-110 cursor-pointer">
-            {tech.icon}
-          </div>
-          {hoveredTech === tech.name && (
-            <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-popover border border-border rounded-md text-xs text-foreground whitespace-nowrap z-30">
-              {tech.name}
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-popover border-r border-b border-border rotate-45 -mt-1" />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// ProjectCard (inlined)
 function ProjectCard({
   image,
   title,
@@ -134,7 +97,7 @@ function ProjectCard({
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-background hover:bg-foreground hover:border-foreground transition-colors"
               >
                 <ArrowUpRight size={16} />
               </a>
@@ -147,7 +110,7 @@ function ProjectCard({
         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
           {description}
         </p>
-        <TechStack items={techStack} />
+        <TechIcons items={techStack} />
       </div>
     </div>
   );
@@ -156,30 +119,34 @@ function ProjectCard({
 // Data
 const allProjects: Project[] = [
   {
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
-    title: "IntelliKit",
+    image: "/project1.png",
+    title: "Mystery Message",
     role: "Full Stack",
     description:
-      "Boost productivity with AI. Content, visuals, and automation in one kit.",
+      "An anonymous messaging app that lets people share honest thoughts freely.",
     techStack: [
-      { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
+      {
+        name: "React",
+        icon: <SiNextdotjs className="w-4 h-4 text-[#FFFFFF]" />,
+      },
       {
         name: "Tailwind",
         icon: <SiTailwindcss className="w-4 h-4 text-[#06B6D4]" />,
       },
-      { name: "Gemini", icon: <SiGoogle className="w-4 h-4 text-[#8B5CF6]" /> },
+      {
+        name: "Shadcn",
+        icon: <SiShadcnui className="w-4 h-4 text-[#000000]" />,
+      },
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://mysterymessage-delta.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/mysterymessage",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
-    title: "Insightix",
+    image: "/project2.png",
+    title: "FinPay",
     role: "Frontend",
     description:
-      "Sleek, high-performance landing page for modern SaaS startups.",
+      "Sleek, high-performance landing page for modern FinTech startups.",
     techStack: [
       { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
       {
@@ -188,52 +155,22 @@ const allProjects: Project[] = [
       },
       { name: "Framer", icon: <SiFramer className="w-4 h-4 text-[#0055FF]" /> },
       { name: "Figma", icon: <SiFigma className="w-4 h-4 text-[#F24E1E]" /> },
+      { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#9135FF]" /> },
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://fin-pay-zeta.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/Fin-pay",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
-    title: "Grey Allegiance",
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=450&fit=crop",
+    title: "TaskFlow",
     role: "Full Stack",
     description:
-      "Discreet digital presence for elite personal security services.",
+      "Kanban-style project management with AI-powered task prioritization.",
     techStack: [
-      { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
-      {
-        name: "MongoDB",
-        icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
-      },
-      { name: "Express", icon: <SiExpress className="w-4 h-4" /> },
-      {
-        name: "Node.js",
-        icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" />,
-      },
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=450&fit=crop",
-    title: "CloudSync Pro",
-    role: "Backend",
-    description:
-      "Enterprise-grade file synchronization with real-time collaboration.",
-    techStack: [
-      {
-        name: "Node.js",
-        icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" />,
-      },
-      {
-        name: "AWS",
-        icon: <SiAmazonwebservices className="w-4 h-4 text-[#FF9900]" />,
-      },
-      {
-        name: "PostgreSQL",
-        icon: <SiPostgresql className="w-4 h-4 text-[#4169E1]" />,
-      },
+      { name: "Next.js", icon: <SiNextdotjs className="w-4 h-4" /> },
+      { name: "Prisma", icon: <SiPrisma className="w-4 h-4" /> },
+      { name: "OpenAI", icon: <SiOpenai className="w-4 h-4" /> },
     ],
     liveUrl: "#",
     githubUrl: "#",
@@ -247,7 +184,6 @@ export default function Projects() {
       <NavBar />
 
       <main className="pt-24 pb-16 px-6">
-        {/* ↓ Changed max-w-6xl → max-w-5xl to match Writing page */}
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <motion.div
@@ -269,7 +205,7 @@ export default function Projects() {
                 <span className="text-sm tracking-[0.2em] uppercase text-primary mb-4 block">
                   Portfolio Archive
                 </span>
-                <h1 className="text-4xl sm:text-5xl font-serif italic mb-4 pl-2 pb-2">
+                <h1 className="text-4xl sm:text-5xl font-serif italic text-foreground mb-4 pl-2 pb-2">
                   All <span className="text-muted-foreground">Projects</span>
                 </h1>
                 <p className="text-muted-foreground text-lg max-w-xl">
@@ -290,7 +226,7 @@ export default function Projects() {
             <Separator className="mt-8" />
           </motion.div>
 
-          {/* Projects Grid — unchanged card style */}
+          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {allProjects.map((project, index) => (
               <motion.div
