@@ -10,7 +10,7 @@ const projects = [
     title: "Mystery Message",
     description:
       "An anonymous messaging web application where users can create a unique link, share it publicly, and receive anonymous messages securely.",
-    image: "/project1.png",
+    image: "/assets/project1.png",
     tags: ["Next.js", "Shadcn", "MongoDB", "NextAuth"],
     liveUrl: "https://mysterymessage-delta.vercel.app",
     githubUrl: "https://github.com/harshitsaxena214/mysterymessage",
@@ -19,7 +19,7 @@ const projects = [
     title: "Finpay Landing Page",
     description:
       "A modern fintech landing page with clean design, smooth animations, and strong visual hierarchy — built to showcase AI-accelerated, high-quality frontend development.",
-    image: "/project2.png",
+    image: "/assets/project2.png",
     tags: ["React", "TypeScript", "AI", "Tailwind"],
     liveUrl: "https://fin-pay-zeta.vercel.app",
     githubUrl: "https://github.com/harshitsaxena214/Fin-pay",

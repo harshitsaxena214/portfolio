@@ -119,7 +119,7 @@ function ProjectCard({
 // Data
 const allProjects: Project[] = [
   {
-    image: "/project1.png",
+    image: "/assets/project1.png",
     title: "Mystery Message",
     role: "Full Stack",
     description:
@@ -142,7 +142,7 @@ const allProjects: Project[] = [
     githubUrl: "https://github.com/harshitsaxena214/mysterymessage",
   },
   {
-    image: "/project2.png",
+    image: "/assets/project2.png",
     title: "FinPay",
     role: "Frontend",
     description:

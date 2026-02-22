@@ -18,7 +18,7 @@ const posts = [
     date: "Jun 2025",
     readTime: "10 min read",
     tags: ["AI", "MCP", "LLMs"],
-    image: "/blogMcp.png",
+    image: "/assets/blogMcp.png",
   },
   {
     title: "DNS 101: What Happens When You Type google.com?",
@@ -28,7 +28,7 @@ const posts = [
     date: "Jun 2025",
     readTime: "5 min read",
     tags: ["Networking", "DNS", "Web"],
-    image: "/blogDns.png",
+    image: "/assets/blogDns.png",
   },
 ];
 

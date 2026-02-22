@@ -24,15 +24,25 @@ export const metadata: Metadata = {
   description:
     "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, Next.js, and Node.js.",
   authors: [{ name: "Harshit Saxena" }],
+  metadataBase: new URL("https://harshitsaxena.xyz"),
   openGraph: {
     title: "Harshit Saxena - Full Stack Developer",
     description:
       "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, Next.js and Node.js.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Harshit Saxena - Full Stack Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@harshitsaxena",
+    images: ["/og-image.png"],
   },
 };
 
