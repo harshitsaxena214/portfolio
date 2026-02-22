@@ -22,9 +22,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/harshitsaxena214", label: "GitHub" },
+  { icon: Twitter, href: "https://twitter.com.harshits_twt", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
 ];
 
