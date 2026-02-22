@@ -22,8 +22,9 @@ import {
   SiAmazonwebservices,
   SiGoogle,
 } from "react-icons/si";
+import { Separator } from "@/components/ui/separator";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// Types
 interface TechItem {
   name: string;
   icon: React.ReactNode;
@@ -39,7 +40,7 @@ interface Project {
   liveUrl?: string;
 }
 
-// ─── TechStack (inlined) ──────────────────────────────────────────────────────
+// TechStack (inlined)
 function TechStack({ items }: { items: TechItem[] }) {
   const [expanded, setExpanded] = useState(false);
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
@@ -79,8 +80,16 @@ function TechStack({ items }: { items: TechItem[] }) {
   );
 }
 
-// ─── ProjectCard (inlined) ────────────────────────────────────────────────────
-function ProjectCard({ image, title, role, description, techStack, githubUrl, liveUrl }: Project) {
+// ProjectCard (inlined)
+function ProjectCard({
+  image,
+  title,
+  role,
+  description,
+  techStack,
+  githubUrl,
+  liveUrl,
+}: Project) {
   return (
     <div className="group">
       {/* Browser Frame */}
@@ -106,7 +115,9 @@ function ProjectCard({ image, title, role, description, techStack, githubUrl, li
       {/* Content */}
       <div className="mt-6 px-1">
         <div className="flex items-center justify-between mb-1">
-          <h3 className="font-serif text-2xl italic text-foreground">{title}</h3>
+          <h3 className="font-serif text-2xl italic text-foreground">
+            {title}
+          </h3>
           <div className="flex items-center gap-2">
             {githubUrl && (
               <a
@@ -130,37 +141,51 @@ function ProjectCard({ image, title, role, description, techStack, githubUrl, li
             )}
           </div>
         </div>
-        <p className="text-sm tracking-[0.15em] uppercase text-primary mb-3">{role}</p>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-4">{description}</p>
+        <p className="text-sm tracking-[0.15em] uppercase text-primary mb-3">
+          {role}
+        </p>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          {description}
+        </p>
         <TechStack items={techStack} />
       </div>
     </div>
   );
 }
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
+// Data
 const allProjects: Project[] = [
   {
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
     title: "IntelliKit",
     role: "Full Stack",
-    description: "Boost productivity with AI. Content, visuals, and automation in one kit.",
+    description:
+      "Boost productivity with AI. Content, visuals, and automation in one kit.",
     techStack: [
       { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="w-4 h-4 text-[#06B6D4]" /> },
+      {
+        name: "Tailwind",
+        icon: <SiTailwindcss className="w-4 h-4 text-[#06B6D4]" />,
+      },
       { name: "Gemini", icon: <SiGoogle className="w-4 h-4 text-[#8B5CF6]" /> },
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
     title: "Insightix",
     role: "Frontend",
-    description: "Sleek, high-performance landing page for modern SaaS startups.",
+    description:
+      "Sleek, high-performance landing page for modern SaaS startups.",
     techStack: [
       { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="w-4 h-4 text-[#06B6D4]" /> },
+      {
+        name: "Tailwind",
+        icon: <SiTailwindcss className="w-4 h-4 text-[#06B6D4]" />,
+      },
       { name: "Framer", icon: <SiFramer className="w-4 h-4 text-[#0055FF]" /> },
       { name: "Figma", icon: <SiFigma className="w-4 h-4 text-[#F24E1E]" /> },
     ],
@@ -168,114 +193,111 @@ const allProjects: Project[] = [
     githubUrl: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
     title: "Grey Allegiance",
     role: "Full Stack",
-    description: "Discreet digital presence for elite personal security services.",
+    description:
+      "Discreet digital presence for elite personal security services.",
     techStack: [
       { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
-      { name: "MongoDB", icon: <SiMongodb className="w-4 h-4 text-[#47A248]" /> },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
+      },
       { name: "Express", icon: <SiExpress className="w-4 h-4" /> },
-      { name: "Node.js", icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" /> },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" />,
+      },
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=450&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=450&fit=crop",
     title: "CloudSync Pro",
     role: "Backend",
-    description: "Enterprise-grade file synchronization with real-time collaboration.",
+    description:
+      "Enterprise-grade file synchronization with real-time collaboration.",
     techStack: [
-      { name: "Node.js", icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" /> },
-      { name: "AWS", icon: <SiAmazonwebservices className="w-4 h-4 text-[#FF9900]" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="w-4 h-4 text-[#4169E1]" /> },
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=450&fit=crop",
-    title: "TaskFlow",
-    role: "Full Stack",
-    description: "Kanban-style project management with AI-powered task prioritization.",
-    techStack: [
-      { name: "Next.js", icon: <SiNextdotjs className="w-4 h-4" /> },
-      { name: "Prisma", icon: <SiPrisma className="w-4 h-4" /> },
-      { name: "OpenAI", icon: <SiOpenai className="w-4 h-4" /> },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" />,
+      },
+      {
+        name: "AWS",
+        icon: <SiAmazonwebservices className="w-4 h-4 text-[#FF9900]" />,
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql className="w-4 h-4 text-[#4169E1]" />,
+      },
     ],
     liveUrl: "#",
     githubUrl: "#",
   },
 ];
 
-// ─── Page ──────────────────────────────────────────────────────────────────────
+// Page
 export default function Projects() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <NavBar />
 
       <main className="pt-24 pb-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Back Link */}
+        {/* ↓ Changed max-w-6xl → max-w-5xl to match Writing page */}
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
             >
-              <ArrowLeft size={16} />
+              <ArrowLeft size={14} />
               Back to Home
             </Link>
+
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+              <div>
+                <span className="text-sm tracking-[0.2em] uppercase text-primary mb-4 block">
+                  Portfolio Archive
+                </span>
+                <h1 className="text-4xl sm:text-5xl font-serif italic mb-4 pl-2 pb-2">
+                  All <span className="text-muted-foreground">Projects</span>
+                </h1>
+                <p className="text-muted-foreground text-lg max-w-xl">
+                  A curated collection of shipping web applications,
+                  experiments, and digital craftsmanship.
+                </p>
+              </div>
+
+              <div className="text-right shrink-0">
+                <span className="text-sm tracking-[0.2em] uppercase text-primary">
+                  Total Works
+                </span>
+                <p className="text-7xl sm:text-8xl font-serif italic text-muted-foreground/40 leading-none">
+                  {String(allProjects.length).padStart(2, "0")}
+                </p>
+              </div>
+            </div>
+            <Separator className="mt-8" />
           </motion.div>
 
-          {/* Header */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-sm tracking-[0.2em] uppercase text-primary mb-4 block">
-                Portfolio Archive
-              </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif">
-                <span className="pl-2 pr-1 italic text-shimmer">All</span>{" "}
-                <span className="italic text-shimmer">Projects</span>
-              </h1>
-              <p className="mt-6 text-muted-foreground max-w-xl text-lg">
-                A curated collection of shipping web applications, experiments,
-                and digital craftsmanship.
-              </p>
-              <div className="w-full h-px bg-gradient-to-r from-border via-muted-foreground/20 to-transparent mt-8" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-right"
-            >
-              <span className="text-sm tracking-[0.2em] uppercase text-primary">
-                Total Works
-              </span>
-              <p className="text-7xl sm:text-8xl font-serif italic text-muted-foreground/40 leading-none">
-                {String(allProjects.length).padStart(2, "0")}
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-12">
+          {/* Projects Grid — unchanged card style */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {allProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: 0.12 * (index + 1) }}
               >
                 <ProjectCard {...project} />
               </motion.div>
@@ -283,7 +305,6 @@ export default function Projects() {
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

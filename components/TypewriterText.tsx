@@ -7,41 +7,44 @@ interface TypewriterTextProps {
   className?: string;
 }
 
-export const TypewriterText = ({
-  words,
-  className = "",
-}: TypewriterTextProps) => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
+export const TypewriterText = ({ words, className = "" }: TypewriterTextProps) => {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const word = words[currentWordIndex];
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          if (currentText.length < word.length) {
-            setCurrentText(word.slice(0, currentText.length + 1));
-          } else {
-            setTimeout(() => setIsDeleting(true), 2000);
-          }
+    const currentWord = words[wordIndex];
+
+    let delay = isDeleting ? 50 : 100;
+
+    // Pause when word is fully typed
+    if (!isDeleting && text === currentWord) {
+      delay = 2000;
+    }
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (text.length < currentWord.length) {
+          setText(currentWord.slice(0, text.length + 1));
         } else {
-          if (currentText.length > 0) {
-            setCurrentText(word.slice(0, currentText.length - 1));
-          } else {
-            setIsDeleting(false);
-            setCurrentWordIndex((prev) => (prev + 1) % words.length);
-          }
+          setIsDeleting(true);
         }
-      },
-      isDeleting ? 50 : 100,
-    );
-    return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentWordIndex, words]);
+      } else {
+        if (text.length > 0) {
+          setText(currentWord.slice(0, text.length - 1));
+        } else {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, wordIndex, words]);
 
   return (
     <span className={className}>
-      {currentText}
+      {text}
       <span className="typing-cursor" />
     </span>
   );
