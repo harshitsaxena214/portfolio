@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { Github, Twitter, Linkedin, Instagram, Mail, Calendar, FileText, MessageCircle } from "lucide-react";
 const socialLinks = [
-  { icon: Github, name: "GitHub", href: "https://github.com" },
-  { icon: Twitter, name: "Twitter", href: "https://twitter.com" },
+  { icon: Github, name: "GitHub", href: "https://github.com/harshitsaxena214" },
+  { icon: Twitter, name: "Twitter", href: "https://x.com/harshits_twt" },
   { icon: Linkedin, name: "LinkedIn", href: "https://linkedin.com" },
   { icon: Instagram, name: "Instagram", href: "https://instagram.com" },
-  { icon: Mail, name: "Email", href: "mailto:hello@harshit.dev" },
+  { icon: Mail, name: "Email", href: "mailto:harshit@harshitsaxena.xyz" },
 ];
 const actionLinks = [
   { icon: Calendar, name: "Schedule a Call", label: "Meeting", href: "#" },
