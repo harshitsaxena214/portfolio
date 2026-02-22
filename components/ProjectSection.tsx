@@ -50,8 +50,8 @@ export const ProjectsSection = () => {
         >
           <span className="section-label">Curated Selection</span>
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-serif">
-            <span className="pl-1 italic text-shimmer">Featured</span>{" "}
-            <span className="italic text-shimmer">Works</span>
+            <span className="pl-1 italic text-foreground">Featured</span>{" "}
+            <span className="text-muted-foreground font-semibold">Works</span>
           </h2>
           <div className="w-full h-px bg-gradient-to-r from-border via-muted-foreground/20 to-transparent mt-6" />
         </motion.div>
@@ -79,7 +79,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-shimmer">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl pb-2 font-serif italic text-shimmer">
             More in development...
           </h3>
         </motion.div>

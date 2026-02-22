@@ -28,7 +28,7 @@ const socialLinks = [
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
 ];
 
-export const Navbar = () => {
+export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 

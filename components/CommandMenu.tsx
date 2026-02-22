@@ -119,7 +119,7 @@ export const CommandMenu = () => {
             break;
           case "X":
             e.preventDefault();
-            window.open("https://twitter.com", "_blank");
+            window.open("https://twitter.com/harshits_twt", "_blank");
             setOpen(false);
             break;
           case "L":
@@ -129,7 +129,7 @@ export const CommandMenu = () => {
             break;
           case "G":
             e.preventDefault();
-            window.open("https://github.com", "_blank");
+            window.open("https://github.com/harshitsaxena214", "_blank");
             setOpen(false);
             break;
           case "E":
