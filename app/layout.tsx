@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Harshit Saxena - Full Stack Developer",
   description:
-    "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, React, and Node.js.",
+    "Full Stack Developer passionate about crafting seamless interfaces with TypeScript, Next.js, and Node.js.",
   authors: [{ name: "Harshit Saxena" }],
   openGraph: {
     title: "Harshit Saxena - Full Stack Developer",
@@ -41,7 +43,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>  <TooltipProvider>
+        {children}
+        <Toaster />
+      </TooltipProvider></body>
     </html>
   );
 }
