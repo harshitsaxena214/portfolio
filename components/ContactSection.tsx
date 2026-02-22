@@ -27,7 +27,7 @@ export const ContactSection = () => {
         >
           <span className="section-label">Contact</span>
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-serif">
-            <span className="italic text-shimmer">Let's build something</span>
+            <span className="italic text-foreground">Let's build something</span>
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-shimmer mt-2 pb-4">
             extraordinary together
