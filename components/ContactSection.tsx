@@ -10,7 +10,7 @@ const socialLinks = [
   { icon: Mail, name: "Email", href: "mailto:harshit214hs@gmail.com" },
 ];
 const actionLinks = [
-  { icon: Calendar, name: "Schedule a Call", label: "Meeting", href: "https://cal.com/harshit-saxena-hs/consultation-20" },
+  { icon: Calendar, name: "Schedule a Call", label: "Meeting", href: "https://cal.com/harshit-saxena/consultation-20" },
   { icon: FileText, name: "Resume", label: "Resume", href: "/assets/my_resume.pdf" },
   { icon: MessageCircle, name: "WhatsApp", label: "Texting", href: "#" },
 ];
