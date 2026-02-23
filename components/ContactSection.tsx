@@ -5,13 +5,13 @@ import { Github, Twitter, Linkedin, Instagram, Mail, Calendar, FileText, Message
 const socialLinks = [
   { icon: Github, name: "GitHub", href: "https://github.com/harshitsaxena214" },
   { icon: Twitter, name: "Twitter", href: "https://x.com/harshits_twt" },
-  { icon: Linkedin, name: "LinkedIn", href: "https://linkedin.com" },
+  { icon: Linkedin, name: "LinkedIn", href: "https://www.linkedin.com/in/harshit-saxena-51a018285" },
   { icon: Instagram, name: "Instagram", href: "https://instagram.com" },
-  { icon: Mail, name: "Email", href: "mailto:harshit@harshitsaxena.xyz" },
+  { icon: Mail, name: "Email", href: "mailto:harshit214hs@gmail.com" },
 ];
 const actionLinks = [
-  { icon: Calendar, name: "Schedule a Call", label: "Meeting", href: "#" },
-  { icon: FileText, name: "Resume", label: "Resume", href: "#" },
+  { icon: Calendar, name: "Schedule a Call", label: "Meeting", href: "https://cal.com/harshit-saxena-hs/consultation-20" },
+  { icon: FileText, name: "Resume", label: "Resume", href: "https://harshitsaxena.xyz/assets/my_resume.pdf" },
   { icon: MessageCircle, name: "WhatsApp", label: "Texting", href: "#" },
 ];
 export const ContactSection = () => {

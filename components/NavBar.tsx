@@ -23,8 +23,8 @@ const navLinks = [
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/harshitsaxena214", label: "GitHub" },
-  { icon: Twitter, href: "https://twitter.com.harshits_twt", label: "Twitter" },
-  { icon: Linkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/harshits_twt", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/harshit-saxena-51a018285", label: "LinkedIn" },
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
 ];
 
