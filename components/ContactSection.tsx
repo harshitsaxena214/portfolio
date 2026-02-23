@@ -11,7 +11,7 @@ const socialLinks = [
 ];
 const actionLinks = [
   { icon: Calendar, name: "Schedule a Call", label: "Meeting", href: "https://cal.com/harshit-saxena-hs/consultation-20" },
-  { icon: FileText, name: "Resume", label: "Resume", href: "https://harshitsaxena.xyz/assets/my_resume.pdf" },
+  { icon: FileText, name: "Resume", label: "Resume", href: "/assets/my_resume.pdf" },
   { icon: MessageCircle, name: "WhatsApp", label: "Texting", href: "#" },
 ];
 export const ContactSection = () => {
