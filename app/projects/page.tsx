@@ -22,8 +22,6 @@ import {
   SiFastapi,
   SiFramer,
   SiPrisma,
-  SiOpenai,
-  SiAmazonwebservices,
   SiGooglegemini,
   SiShadcnui,
   SiVite,
@@ -180,6 +178,10 @@ const allProjects: Project[] = [
       {
         name: "Express",
         icon: <SiExpress className="w-4 h-4 text-[#FFFFFF]" />,
+      },
+      {
+        name: "Prisma",
+        icon: <SiPrisma className="w-4 h-4 text-[#FFFFFF]" />,
       },
     ],
     liveUrl: "https://settlix.vercel.app",
