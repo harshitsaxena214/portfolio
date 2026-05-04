@@ -7,32 +7,32 @@ import { ProjectCard } from "./ProjectCard";
 
 const projects = [
   {
+    title: "Flow Ship",
+    description:
+      "An AI-powered workflow platform for planning, building, and improving projects with task management and AI-driven code review.",
+    image: "/assets/project3.png",
+    tags: ["FastAPI", "NextJS", "Shadcn", "Supabase", "Clerk", "Gemini"],
+    liveUrl: "https://flowship.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/Project-planner",
+  },
+  {
+    image: "/assets/project4.png",
+    title: "Settlix",
+    role: "Full Stack",
+    description:
+      "A smart expense splitting app for tracking shared costs and settling balances easily.",
+    tags: ["NextJS", "NodeJS", "PostgreSQL", "Express"],
+    liveUrl: "https://settlix.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/expense-splitting-app",
+  },
+  {
     title: "Mystery Message",
     description:
       "An anonymous messaging web application where users can create a unique link, share it publicly, and receive anonymous messages securely.",
     image: "/assets/project1.png",
-    tags: ["Next.js", "Shadcn", "MongoDB", "NextAuth"],
+    tags: ["NextJS", "Shadcn", "MongoDB", "NextAuth", "Framer Motion"],
     liveUrl: "https://mysterymessage-delta.vercel.app",
     githubUrl: "https://github.com/harshitsaxena214/mysterymessage",
-  },
-  {
-    title: "Finpay Landing Page",
-    description:
-      "A modern fintech landing page with clean design, smooth animations, and strong visual hierarchy — built to showcase AI-accelerated, high-quality frontend development.",
-    image: "/assets/project2.png",
-    tags: ["React", "TypeScript", "AI", "Tailwind"],
-    liveUrl: "https://fin-pay-zeta.vercel.app",
-    githubUrl: "https://github.com/harshitsaxena214/Fin-pay",
-  },
-  {
-    title: "SaaS Analytics Tool",
-    description:
-      "Real-time analytics platform with beautiful visualizations and custom reporting features.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
-    tags: ["Next.js", "Prisma", "Charts", "AI"],
-    liveUrl: "#",
-    githubUrl: "#",
   },
 ];
 

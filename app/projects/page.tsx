@@ -16,12 +16,15 @@ import {
   SiExpress,
   SiNodedotjs,
   SiPostgresql,
+  SiSupabase,
   SiFigma,
+  SiClerk,
+  SiFastapi,
   SiFramer,
   SiPrisma,
   SiOpenai,
   SiAmazonwebservices,
-  SiGoogle,
+  SiGooglegemini,
   SiShadcnui,
   SiVite,
 } from "react-icons/si";
@@ -119,6 +122,71 @@ function ProjectCard({
 // Data
 const allProjects: Project[] = [
   {
+    image: "/assets/project3.png",
+    title: "FlowShip",
+    role: "Full Stack",
+    description:
+      "An AI-powered workflow platform for planning, building, and improving projects with task management and AI-driven code review.",
+    techStack: [
+      {
+        name: "FastAPI",
+        icon: <SiFastapi className="w-4 h-4 text-[#009688]" />,
+      },
+      {
+        name: "NextJS",
+        icon: <SiNextdotjs className="w-4 h-4 text-[#FFFFFF]" />,
+      },
+      {
+        name: "Shadcn",
+        icon: <SiShadcnui className="w-4 h-4 text-[#000000]" />,
+      },
+      {
+        name: "Supabase",
+        icon: <SiSupabase className="w-4 h-4 text-[#3ECF8E]" />,
+      },
+      {
+        name: "Clerk",
+        icon: <SiClerk className="w-4 h-4 text-[#6C47FF]" />,
+      },
+
+      {
+        name: "Gemini",
+        icon: <SiGooglegemini className="w-4 h-4 text-[#4285F4]" />,
+      },
+    ],
+    liveUrl: "https://flowship.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/Project-planner",
+  },
+
+  {
+    image: "/assets/project4.png",
+    title: "Settlix",
+    role: "Full Stack",
+    description:
+      "A smart expense splitting app for tracking shared costs and settling balances easily.",
+    techStack: [
+      {
+        name: "NextJS",
+        icon: <SiNextdotjs className="w-4 h-4 text-[#FFFFFF]" />,
+      },
+      {
+        name: "NodeJS",
+        icon: <SiNodedotjs className="w-4 h-4 text-[#339933]" />,
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
+      },
+      {
+        name: "Express",
+        icon: <SiExpress className="w-4 h-4 text-[#FFFFFF]" />,
+      },
+    ],
+    liveUrl: "https://settlix.vercel.app",
+    githubUrl: "https://github.com/harshitsaxena214/expense-splitting-app",
+  },
+
+  {
     image: "/assets/project1.png",
     title: "Mystery Message",
     role: "Full Stack",
@@ -126,7 +194,7 @@ const allProjects: Project[] = [
       "An anonymous messaging app that lets people share honest thoughts freely.",
     techStack: [
       {
-        name: "React",
+        name: "NextJS",
         icon: <SiNextdotjs className="w-4 h-4 text-[#FFFFFF]" />,
       },
       {
@@ -136,6 +204,10 @@ const allProjects: Project[] = [
       {
         name: "Shadcn",
         icon: <SiShadcnui className="w-4 h-4 text-[#000000]" />,
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
       },
     ],
     liveUrl: "https://mysterymessage-delta.vercel.app",
@@ -161,19 +233,29 @@ const allProjects: Project[] = [
     githubUrl: "https://github.com/harshitsaxena214/Fin-pay",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=450&fit=crop",
-    title: "TaskFlow",
+    image: "/assets/project5.png",
+    title: "AI Thumbnail Genrator",
     role: "Full Stack",
     description:
-      "Kanban-style project management with AI-powered task prioritization.",
+      "An AI-powered tool for generating eye-catching thumbnails instantly.",
     techStack: [
-      { name: "Next.js", icon: <SiNextdotjs className="w-4 h-4" /> },
-      { name: "Prisma", icon: <SiPrisma className="w-4 h-4" /> },
-      { name: "OpenAI", icon: <SiOpenai className="w-4 h-4" /> },
+      { name: "React", icon: <SiReact className="w-4 h-4 text-[#61DAFB]" /> },
+      {
+        name: "Tailwind",
+        icon: <SiTailwindcss className="w-4 h-4 text-[#06B6D4]" />,
+      },
+      { name: "Framer", icon: <SiFramer className="w-4 h-4 text-[#0055FF]" /> },
+      { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#9135FF]" /> },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
+      },
+      {
+        name: "Express",
+        icon: <SiExpress className="w-4 h-4 text-[#FFFFFF]" />,
+      },
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/harshitsaxena214/ai-thumbnail-generator",
   },
 ];
 
