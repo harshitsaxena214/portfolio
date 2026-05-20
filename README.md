@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Hi 👋, I'm Harshit Saxena</h1>
 
-## Getting Started
+<p align="center">
+  Full Stack Developer • Open Source Contributor • Problem Solver
+</p>
 
-First, run the development server:
+<p align="center">
+  Building products, contributing to open source, and shipping real-world solutions.
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 About Me
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+💻 Full Stack Developer passionate about building scalable applications and solving real problems.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌱 Currently working on:
+- Open source contributions
+- Full stack web applications
+- Improving UI/UX and developer experience
+- Performance optimizations & feature development
 
-## Learn More
+🔭 Interested in:
+- Web Development
+- Open Source
+- Developer Tools
+- System Design
+- Product Engineering
 
-To learn more about Next.js, take a look at the following resources:
+⚡ Fun fact: I enjoy fixing bugs almost as much as building features.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tech Stack
 
-## Deploy on Vercel
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Backend
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs)
+![Express](https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Database
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
+
+### Tools
+Git • GitHub • Docker • Linux • VS Code • npm
+
+---
+
+## 📌 Featured Projects
+
+### 🩺 SahiDawa
+Healthcare-focused platform with modern web technologies.
+
+Features:
+- Responsive UI
+- Mobile improvements
+- Feature enhancements
+- Open source collaboration workflow
+
+---
+
+## 📈 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight" />
+</p>
+
+---
+
+## 🌍 Open Source
+
+I actively contribute to open-source projects by:
+
+✅ Fixing issues  
+✅ Raising PRs  
+✅ Improving documentation  
+✅ Building features  
+✅ UI enhancements  
+✅ Bug fixes
+
+---
+
+## 📫 Connect With Me
+
+GitHub: https://github.com/harshitsaxena214
+
+LinkedIn: https://www.linkedin.com/in/harshit-saxena-51a018285/
+
+Portfolio: https://harshitsaxena.xyz
+
+Email: harshit214hs@gmail.com
+
+---
+
+<p align="center">
+  Thanks for visiting 🚀
+</p>
